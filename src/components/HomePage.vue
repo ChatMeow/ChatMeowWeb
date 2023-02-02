@@ -245,7 +245,7 @@ export default {
   },
   methods: {
     initConfig() {
-      axios.get('//localhost:5000/get_config').then((response) => {
+      axios.get('/get_config').then((response) => {
         console.log(response.data)
         let data = response.data
 
@@ -298,7 +298,7 @@ export default {
         }
       }
       axios.post(
-          '//localhost:5000/set_config',
+          '/set_config',
           {
             handler: handler,
             name: name,
